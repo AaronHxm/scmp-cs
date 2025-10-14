@@ -138,13 +138,10 @@ public class OrderGrabberApp extends Application {
     
     /**
      * 密码验证逻辑 - 根据PRD要求实现
-     * @param inputPassword 用户输入的密码
-     * @param date 验证日期
-     * @return 验证结果
      */
-    public static boolean validatePassword(String inputPassword, LocalDate date) {
+    private boolean validatePassword(String inputPassword) {
         try {
-            LocalDate now = date != null ? date : LocalDate.now();
+            LocalDate now = LocalDate.now();
             int day = now.getDayOfMonth();
             Month month = now.getMonth();
             
