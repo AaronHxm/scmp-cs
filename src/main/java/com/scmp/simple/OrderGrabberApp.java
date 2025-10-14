@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 抢单辅助程序 - 完整版本
@@ -423,7 +424,7 @@ public class OrderGrabberApp extends Application {
     private void performImmediateGrab() {
         List<OrderData> selectedOrders = orderList.stream()
             .filter(OrderData::isSelected)
-            .toList();
+            .collect(Collectors.toList());
         
         if (selectedOrders.isEmpty()) {
             logError("请先选择要抢单的订单！");
