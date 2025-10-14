@@ -27,3 +27,8 @@ buildNumber.properties
 # System Files
 .DS_Store
 Thumbs.db
+
+# 允许提交的文件类型
+!*.bat
+!*.sh
+!README.md
