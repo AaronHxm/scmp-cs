@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+app:
+  name: 抢单辅助程序
+  version: 1.0.0
+  
+  # 加密配置
+  encryption:
+    fixed-string: LAB2025
+    algorithms:
+      - BASE64
+      - MD5
+      - SHA256
+  
+  # API配置
+  api:
+    base-url: http://localhost:8080/api
+    login-url: /login
+    token-validate-url: /token/validate
+    orders-query-url: /orders/query
+    orders-grab-url: /orders/grab
+    
+  # 定时任务配置
+  scheduler:
+    token-refresh-interval: 600000  # 10分钟，单位毫秒
+    
+  # 日志配置
+  logging:
+    base-path: logs
+    
+spring:
+  application:
+    name: order-grabber
+  main:
+    web-application-type: none
