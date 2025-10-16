@@ -13,6 +13,7 @@ import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.util.Duration;
 import com.scmp.simple.utils.LogUtils;
+import com.scmp.simple.manager.AuthManager;
 
 
 /**
@@ -69,8 +70,10 @@ public class OrderGrabberApp extends Application {
         
         // 模拟登录过程
         Timeline loginDelay = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
-            LogUtils.info("登录", "登录成功，token = abc123456789");
-            LogUtils.info("系统", "Token保活机制已启动，每10分钟自动刷新");
+            LogUtils.info("登录", "登录成功，token = " + AuthManager.maskToken("abc123456789"));
+            
+            // 启动token保活机制
+            AuthManager.startKeepAlive();
         }));
         loginDelay.play();
     }

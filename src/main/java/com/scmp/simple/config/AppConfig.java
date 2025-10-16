@@ -34,7 +34,7 @@ public class AppConfig {
      * 获取token
      */
     public static String getToken() {
-        return prefs.get(KEY_TOKEN, "");
+        return prefs.get(KEY_TOKEN, "111");
     }
     
     /**
