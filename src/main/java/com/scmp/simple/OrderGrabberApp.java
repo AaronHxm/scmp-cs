@@ -11,7 +11,6 @@ import javafx.collections.ObservableList;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.util.Duration;
-import lombok.Data;
 import com.scmp.simple.utils.LogUtils;
 
 
@@ -19,6 +18,7 @@ import com.scmp.simple.utils.LogUtils;
  * 抢单辅助程序 - 完整版本
  * 实现PRD中的所有功能要求
  */
+
 public class OrderGrabberApp extends Application {
     
     private Stage primaryStage;
