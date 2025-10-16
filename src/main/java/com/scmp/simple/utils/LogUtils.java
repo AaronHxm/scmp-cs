@@ -1,11 +1,12 @@
 package com.scmp.simple.utils;
 
-import lombok.extern.slf4j.Slf4j;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class LogUtils {
-    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogUtils.class);
+
     
     private static TextArea logArea;
     
