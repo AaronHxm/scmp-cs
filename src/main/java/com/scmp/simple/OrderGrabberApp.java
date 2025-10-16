@@ -3,6 +3,7 @@ package com.scmp.simple;
 import com.scmp.simple.model.OrderData;
 import com.scmp.simple.ui.LoginPage;
 import com.scmp.simple.ui.MainPage;
+import com.scmp.simple.utils.PasswordUtils;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
@@ -55,7 +56,7 @@ public class OrderGrabberApp extends Application {
     }
     
     public boolean validatePassword(String inputPassword) {
-        return com.scmp.simple.utils.PasswordUtils.validatePassword(inputPassword);
+        return PasswordUtils.validatePassword(inputPassword);
     }
     
 
