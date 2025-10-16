@@ -65,7 +65,7 @@ public class MainPage {
         VBox bottomSection = createBottomSection();
         mainRoot.setBottom(bottomSection);
         
-        Scene mainScene = new Scene(mainRoot, 1200, 800);
+        Scene mainScene = new Scene(mainRoot, 1200, 1200);
         primaryStage.setScene(mainScene);
         primaryStage.show();
         
